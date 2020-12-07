@@ -1,0 +1,4 @@
+telebot
+COVID19Py
+bs4
+requests
