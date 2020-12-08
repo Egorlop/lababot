@@ -4,24 +4,9 @@ from bs4 import BeautifulSoup
 import requests
 from telebot import types
 
-covid19 = COVID19Py.COVID19()
 bot = telebot.TeleBot('1428515220:AAFQIAYTjATEnU_BIN95mVfwP9Nu4aQYsZs')
-# def parse():
-# 	URL = 'https://coronavirus-control.ru/coronavirus-russia/'
-# 	HEADERS = {
-# 		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.185 YaBrowser/20.11.2.78 Yowser/2.5 Safari/537.36'
-# 	}
-# 	response = requests.get(URL, headers=HEADERS)
-# 	soup = BeautifulSoup(response.content, 'html.parser')
-# 	convert = soup.findAll('span', {'class': 'plus'})
-# 	stats = {
-# 		'infectedday': convert[0].text,
-# 		'letalday': convert[2].text,
-# 		'recoveredday': convert[3].text
-# 	}
-# 	return stats
-# Функция, что сработает при отправке команды Старт
-# Здесь мы создаем быстрые кнопки, а также сообщение с привествием
+covid19 = COVID19Py.COVID19()
+
 
 #fdfdgdfg
 
