@@ -1,4 +1,3 @@
-import telebot
 from telebot import types
 import COVID19Py
 
@@ -60,5 +59,3 @@ def mess(message):
 
 # Это нужно чтобы бот работал всё время
 bot.polling(none_stop=True)
-
-
