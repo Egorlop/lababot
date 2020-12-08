@@ -23,6 +23,8 @@ bot = telebot.TeleBot('1428515220:AAFQIAYTjATEnU_BIN95mVfwP9Nu4aQYsZs')
 # Функция, что сработает при отправке команды Старт
 # Здесь мы создаем быстрые кнопки, а также сообщение с привествием
 
+
+
 @bot.message_handler(commands=['start'])
 def start(message):
 	markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
