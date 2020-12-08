@@ -2,8 +2,7 @@ beautifulsoup4==4.9.3
 bs4==0.0.1
 click==7.1.2
 COVID19Py==0.3.0
-PyTelegramBotAPI==2.2.3
+pyTelegramBotAPI==3.7.2
 requests==2.24.0
 telebot==0.0.4
-TelegramBotAPI==0.3.2 
-     
+TelegramBotAPI==0.3.2
