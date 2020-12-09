@@ -4,6 +4,7 @@ import COVID19Py
 from telebot import types
 covid19 = COVID19Py.COVID19()
 
+
 #Иницилизируем имя бота и передаем персональный токен
 bot = telebot.TeleBot('1428515220:AAFQIAYTjATEnU_BIN95mVfwP9Nu4aQYsZs')
 
@@ -18,10 +19,16 @@ def start(message):
 	btn4 = types.KeyboardButton('Памятка профилактики коронавируса')
 	markup.add(btn1, btn2, btn3, btn4)
 	#Приветствие пользователя
-	send_message = f"<b>Привет, {message.from_user.first_name}!</b>\nЧтобы узнать данные по коронавирусу напишите " \
-		f"название страны, например: США, Украина, Россия и так далее\n\n"
+	send_message = f"<b>Привет, {message.from_user.first_name}!</b>\n\nХочешь быть в курсе статистики по коронавирусу?\n\n" \
+		f"Мы собираем для тебя самые свежие данные по количеству заболевших и количеству смертей во всём мире каждый день!\n\n"\
+		"Используй @LabaCoronaBot, чтобы узнать статистику по странам из списка топ-15 по заражения COVID-19.\n\n" \
+		"1) США\n2) Индия\n3) Бразилия\n4) Россия\n5) Франция\n6) Италия\n" \
+		"7) Великобритания\n8) Испания\n9) Аргентина\n10) Колумбия\n11) Германия\n" \
+		"12) Мексика\n13) Польша\n14) Иран\n15) Перу\n\n"\
+		"<b>Читай наши советы по профилактике и будьте здоровы!</b>"
 	#Отправка сообщения в чат
 	bot.send_message(message.chat.id, send_message, parse_mode='html', reply_markup=markup)
+	#bot.send_message(message.chat.id, send_countries, parse_mode='html', reply_markup=markup)
 
 # Функция, которая сработает при отправке какого-либо собщения боту
 @bot.message_handler(content_types=['text'])
@@ -57,6 +64,8 @@ def mess(message):
 		location = covid19.getLocationByCountryCode("PL")
 	elif get_message_bot == "иран":
 		location = covid19.getLocationByCountryCode("IR")
+	elif get_message_bot == "перу":
+		location = covid19.getLocationByCountryCode("PE")
 	elif get_message_bot == "в мире":
 		flag=1
 	elif get_message_bot == "памятка профилактики коронавируса":
