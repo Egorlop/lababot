@@ -49,7 +49,7 @@ def mess(message):
 	elif get_message_bot == "италия":
 		location = covid19.getLocationByCountryCode("IT")
 	elif get_message_bot == "великобритания":
-		location = covid19.getLocationByCountryCode("UK")
+		flag = 3
 	elif get_message_bot == "испания":
 		location = covid19.getLocationByCountryCode("ES")
 	elif get_message_bot == "аргентина":
@@ -90,6 +90,12 @@ def mess(message):
 		pam3 = "<b>Правило 3:</b>\nЗдоровый образ жизни повышает сопротивляемость организма к инфекции. Соблюдайте здоровый режим, включая полноценный сон, потребление пищевых продуктов богатых белками, витаминами и минеральными веществами, физическую активность.\n\n"
 		pam4 = "<b>Правило 4:</b>\nСреди прочих средств профилактики особое место занимает ношение масок, благодаря которым ограничивается распространение вируса.  "
 		final_message = pam1 + pam2 + pam3 + pam4
+	if flag == 3:
+		final_message = f"<u>Данные по стране:</u>\nНаселение: 66 993 318 \n" \
+						"Последние данные:\n<b>" \
+						f"Заболевших: </b>1 948 660\n<b>Смертей: </b>" \
+						f"66 052"
+
 	# Отправка сообщения в чат
 	bot.send_message(message.chat.id, final_message, parse_mode='html')
 #Необходимо, чтобы бот не прекрощал свою работу по завершении цикла
