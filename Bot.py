@@ -5,7 +5,7 @@ from telebot import types
 covid19 = COVID19Py.COVID19()
 
 
-#Иницилизируем имя бота и передаем персональный токен
+#Иницилизируем имя бота и передаем персональный ток
 bot = telebot.TeleBot('1428515220:AAGG-9TP1S_AC4ZntSvHSNSVGjjP_XqiKTI')
 
 #Функция для обработки первого запуска бота пользвателем
