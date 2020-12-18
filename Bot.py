@@ -6,7 +6,7 @@ covid19 = COVID19Py.COVID19()
 
 
 #Иницилизируем имя бота и передаем персональный токен
-bot = telebot.TeleBot('1428515220:AAFscXz1QYs-Bd3HDwX79tM31VnhAgHtMBI')
+bot = telebot.TeleBot('1428515220:AAGG-9TP1S_AC4ZntSvHSNSVGjjP_XqiKTI')
 
 #Функция для обработки первого запуска бота пользвателем
 @bot.message_handler(commands=['start'])
