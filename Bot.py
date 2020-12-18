@@ -43,7 +43,7 @@ def mess(message):
 	elif get_message_bot == "бразилия":
 		location = covid19.getLocationByCountryCode("BR")
 	elif get_message_bot == "россия":
-		location = covid19.getLocationByCountryCode("RU")
+		flag = 4
 	elif get_message_bot == "франция":
 		location = covid19.getLocationByCountryCode("FR")
 	elif get_message_bot == "италия":
@@ -95,8 +95,14 @@ def mess(message):
 						"Последние данные:\n<b>" \
 						f"Заболевших: </b>1 948 660\n<b>Смертей: </b>" \
 						f"66 052"
+	if flag == 4:
+		final_message = f"<u>Данные по стране:</u>\nНаселение: 146 630 227 \n" \
+						"Последние данные:\n<b>" \
+						f"Заболевших: </b>2 791 220\n<b>Смертей: </b>" \
+						f"49 762"
 
 	# Отправка сообщения в чат
 	bot.send_message(message.chat.id, final_message, parse_mode='html')
 #Необходимо, чтобы бот не прекрощал свою работу по завершении цикла
 bot.polling(none_stop=True)
+
